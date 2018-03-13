@@ -25,6 +25,8 @@ while getopts ":a:b:c:h" opt; do
     esac
 done
 
+[ -z "${ARGUMENT2}" ] && echo "argument2 is required." && usage
+
 echo "Do something."
 echo "argument1: ${ARGUMENT1}"
 echo "argument2: ${ARGUMENT2}"
